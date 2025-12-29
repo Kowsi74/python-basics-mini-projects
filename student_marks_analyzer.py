@@ -1,16 +1,11 @@
-name = input("Enter student name: ")
+marks = int(input())
+age = int(input())
 
-maths = float(input("Enter Maths mark: "))
-python = float(input("Enter Python mark: "))
-dsa = float(input("Enter DSA mark: "))
-genai = float(input("Enter GenAI mark: "))
-
-total = maths + python + dsa + genai
-average = total / 4
-percentage = (total / 400) * 100
-
-print("\n--- Student Report ---")
-print(f"Name       : {name}")
-print(f"Total      : {total:.2f}")
-print(f"Average    : {average:.2f}")
-print(f"Percentage : {percentage:.2f}%")
+if age < 18 or marks < 50 :
+    print("NOT ELIGIBLE")
+elif marks >= 90:
+    print("TOP GRADE")
+elif marks >= 75 and age >= 18 :
+    print("GRADE B")
+else:
+    print("GRADE C")
